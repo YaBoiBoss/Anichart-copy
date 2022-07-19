@@ -6,6 +6,10 @@ body{
   background: #EDF1F5;
 }
 
+body.dark{
+  background: #18161b;
+}
+
 nav{
   display: flex;
   justify-content: space-evenly;
@@ -15,12 +19,32 @@ nav{
   padding-top: 10px;
 }
 
+nav.dark{
+  background:#1a1c25 ;
+}
+
 nav > img{
   height: 43px;
   margin: 10px;
   position: relative;
   left: 5.5%;
   padding-top: 10px;
+}
+
+.season > div{
+  color:#B0B3D5
+}
+
+.season.dark > div{
+  color:#fafbfc
+}
+
+.season.selected > div{
+  color:#fafbfc
+}
+
+.season.dark.selected > div{
+  color:#B0B3D5
 }
 
 .seasons{
@@ -152,6 +176,10 @@ nav > img{
   position: relative;
 }
 
+.card--right.dark{
+  background: #3c3c3c;
+}
+
 .card--right > h1{
   font-size: 1.8rem;
   font-weight: 600;
@@ -159,6 +187,10 @@ nav > img{
   color: #5C728A;
   margin: 0px;
   margin-left: 20px;
+}
+
+.card--right.dark > h1{
+  color: #fafbfc;
 }
 
 .card--right > p{
@@ -170,6 +202,10 @@ nav > img{
   margin-left: 20px;
 }
 
+.card--right.dark > p{
+  color: #fafbfc;
+}
+
 .card--right > h2{
   color:#5C728A;
   font-size: 1.1rem;
@@ -178,6 +214,10 @@ nav > img{
   padding-top: 10px;
   margin-left: 20px;
   margin-bottom: 8px;
+}
+
+.card--right.dark > h2{
+  color: #fafbfc;
 }
 
 .card--right > h3{
@@ -194,6 +234,10 @@ nav > img{
   max-height: 80px;
 }
 
+.card--right.dark > h3{
+  color: #fafbfc;
+}
+
 .category-box{
   height: 44px;
   position: absolute;
@@ -202,6 +246,10 @@ nav > img{
   width: 100%;
   display: flex;
   align-items: center;
+}
+
+.category-box.dark{
+  background: #262626;
 }
 
 .genre{
@@ -213,4 +261,37 @@ nav > img{
   text-align: center;
   border-radius: 15px;
   color:#EFF7FB
+}
+
+.dark-mode-wrap{
+  position: absolute;
+  right: 14%;
+  top:150px;
+  display: flex;
+  align-items: center;
+  color:#EDF1F5
+}
+
+
+.dark-mode-frame{
+  margin-left: 10px;
+  background: #EDF1F5;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center
+}
+
+.dark-mode--toggle{
+  background:#5C728A;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  border:#312c66 1px solid;
+  cursor: pointer;
+}
+
+.dark-mode--toggle.dark{
+  margin-left: auto;
 }

@@ -30,6 +30,11 @@ const topIconArr = [
 export default function Navbar(props){
 
 
+    const {darkMode,setDarkMode} = props
+
+    const addedClass = darkMode ? "dark" : ""
+
+
     const [seasons,setSeasons] = useState(seasonsArr.map((season,index)=>{
         return{
             value: season,
@@ -57,21 +62,28 @@ export default function Navbar(props){
 
 
     const seasonElements = seasons.map(
-        season => <Seasson info={season} key={season.id} handleClick={handleClick} />
+        season => <Seasson darkMode={props.darkMode} info={season} key={season.id} handleClick={handleClick} />
     )
 
     const topIconElements = topIcons.map(
-        topIcon => <TopIcon key={topIcon.value} info={topIcon} handleClick={handleClick}/>
+        topIcon => <TopIcon darkMode={props.darkMode} key={topIcon.value} info={topIcon} handleClick={handleClick}/>
     )
 
     return(
-        <nav>
+        <nav className={addedClass}>
             <img src="https://i.imgur.com/h03nBpt.png"/>
             <div className="seasons">
                 {seasonElements}
             </div>
             <div className="top-icons">
                 {topIconElements}
+            </div>
+            <div className="dark-mode-wrap">
+                <p>Dark Mode</p>
+                <div className="dark-mode-frame">
+                    <div className={"dark-mode--toggle "+addedClass} onClick={()=>setDarkMode(prevState => !prevState)} >
+                    </div>
+                </div>
             </div>
         </nav>
     )

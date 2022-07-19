@@ -5,6 +5,9 @@ const Months = ['January','February','March','April','May','June','July','August
 export default function Card(props){
     const {title,coverImage,startDate,episodes,source,description,genres,studios} = props.info;
 
+
+    const addedClass = props.darkMode ? "dark" : ""
+
     let desc = null
     if(description){
         desc =  description.replace(/[/]/g,"").replace(/<i>/g,'"').replace(/<br>/g,"")
@@ -26,12 +29,12 @@ export default function Card(props){
                     <p>{studios.nodes.length>0 && studios.nodes[0].name}</p>
                 </div>
             </div>
-            <div className="card--right">
+            <div className={"card--right "+addedClass}>
                 <p>{episodes ? episodes+" Episodes a" : "A"}iring in</p>
                 <h1>{startDate.month && (Months[startDate.month+1]+" ") }{startDate.day && (startDate.day+", ") }{startDate.year}</h1>
                 <h2>Source • {source}</h2>
                 <h3>{desc && desc}</h3>
-                <div className="category-box">
+                <div className={"category-box "+addedClass}>
                     {genreElements}
                 </div>
             </div>

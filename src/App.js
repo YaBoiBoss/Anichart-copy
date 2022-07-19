@@ -14,10 +14,16 @@ const media = data.media.sort((a,b) => {
 
 function App() {
 
+  const [darkMode,setDarkMode] = useState(false)
+
+  useEffect(()=>{
+    darkMode ? document.body.classList.add("dark") : document.body.classList.remove('dark');
+  },[darkMode])
+
   return (
     <div className="App">
-      <Navbar/>
-      <Main media={media}/>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+      <Main media={media} darkMode={darkMode}/>
     </div>
   );
 }

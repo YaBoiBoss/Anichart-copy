@@ -5,7 +5,7 @@ export default function Main(props){
 
 
     const mediaElements = props.media.map(anime => {
-        return <Card info = {anime} />
+        return <Card info = {anime} darkMode={props.darkMode}/>
     })
     
 
