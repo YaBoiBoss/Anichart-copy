@@ -1,0 +1,216 @@
+
+body{
+  margin: 0px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: bolder;
+  background: #EDF1F5;
+}
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background:#2B2D42 ;
+  padding-bottom: 100px;
+  padding-top: 10px;
+}
+
+nav > img{
+  height: 43px;
+  margin: 10px;
+  position: relative;
+  left: 5.5%;
+  padding-top: 10px;
+}
+
+.seasons{
+  display: flex;
+  position: relative;
+  left: 5%;
+}
+
+.season{
+  margin-block: 35px;
+  margin-inline: 31px;
+  cursor: pointer;
+}
+
+.year-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.year-wrap >p{
+  margin: 0px;
+  font-size: 0.6rem;
+}
+
+.year-wrap >h1{
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.top-icons{
+  position: relative;
+  right: 1.5%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.top-icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding-top: 24px;
+  cursor: pointer;
+}
+
+.top-img{
+  height: 22px;
+  margin-bottom: 5px;
+}
+
+.top-icon > p{
+  margin: 8px;
+  padding: 0px;
+  font-size: 0.9rem;
+}
+
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  position: absolute;
+  top:-50px;
+}
+
+.card{
+  margin-inline: 40px;
+  margin-bottom: 80px;
+  display: flex;
+}
+
+.card--left{
+  position: relative;
+  width: 185px;
+  height: 265px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.main-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.card--name-box{
+  background:rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 7px;
+}
+
+.card--name-box > h1{
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 5px;
+  margin-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+}
+
+.card--name-box > p{
+  color: #F09069;
+  font-size: 12px;
+  margin: 0px;
+  margin-left: 15px;
+  padding-bottom: 5px;
+}
+
+.card--img{
+  border-radius: 7px;
+  border-top-right-radius: 0px;
+  min-width: 185px;
+}
+
+.card--right{
+  width: 370px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px rgb(49 54 68 / 5%), 0 5px 20px rgb(49 54 68 / 8%);
+  height: 265px;
+  text-overflow: ellipsis;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card--right > h1{
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-top: 3px;
+  color: #5C728A;
+  margin: 0px;
+  margin-left: 20px;
+}
+
+.card--right > p{
+  color:#5C728A;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0px;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.card--right > h2{
+  color:#5C728A;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0px;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.card--right > h3{
+  overflow: hidden;
+  color:#5C728A;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0px;
+  padding-top: 3px;
+  margin-left: 20px;
+  text-overflow:initial;
+  height: 40%;
+  width: 80%;
+  max-height: 80px;
+}
+
+.category-box{
+  height: 44px;
+  position: absolute;
+  bottom: 0px;
+  background: #EFF7FB;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.genre{
+  margin: 10px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 0px;
+  padding-block: 3px;
+  text-align: center;
+  border-radius: 15px;
+  color:#EFF7FB
+}
