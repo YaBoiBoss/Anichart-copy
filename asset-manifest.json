@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/anichart-copy/static/css/main.5db6fa5d.css",
+    "main.js": "/anichart-copy/static/js/main.a896ae66.js",
+    "static/js/787.b734fbb9.chunk.js": "/anichart-copy/static/js/787.b734fbb9.chunk.js",
+    "index.html": "/anichart-copy/index.html",
+    "main.5db6fa5d.css.map": "/anichart-copy/static/css/main.5db6fa5d.css.map",
+    "main.a896ae66.js.map": "/anichart-copy/static/js/main.a896ae66.js.map",
+    "787.b734fbb9.chunk.js.map": "/anichart-copy/static/js/787.b734fbb9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5db6fa5d.css",
+    "static/js/main.a896ae66.js"
+  ]
+}
