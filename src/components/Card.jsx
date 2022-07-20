@@ -1,10 +1,13 @@
 import React from "react";
+import {FaRegHeart} from "react-icons/fa"
 
 const Months = ['January','February','March','April','May','June','July','August','September','October','November','December']
 
+
+
 export default function Card(props){
     const {title,coverImage,startDate,episodes,source,description,genres,studios} = props.info;
-    const {hashtag,trailer} = props.info;
+    const {hashtag,trailer,rankings} = props.info;
 
     const addedClass = props.darkMode ? "dark" : ""
 
@@ -19,6 +22,9 @@ export default function Card(props){
         return <p style={{background: coverImage.color}} className="genre">{g}</p>
     }).splice(0,2)
 
+    let rank = null;
+
+    if(rankings && rankings[0] && rankings[0].rank) rank = rankings[0].rank
 
     return(
         <div className={"card "+addedClass} >
@@ -32,9 +38,17 @@ export default function Card(props){
             <div className={"card--right "+addedClass}>
                 <div className="top-info">
                     <div className="first-info">
-                        <p>{episodes ? episodes+" Episodes a" : "A"}iring in</p>
-                        <h1>{startDate.month && (Months[startDate.month-1]+" ") }{startDate.day && (startDate.day+", ") }{startDate.year}</h1>
-                        <h2>Source • {source}</h2>
+                        <div className="text">
+                            <p>{episodes ? episodes+" Episodes a" : "A"}iring in</p>
+                            <h1>{startDate.month && (Months[startDate.month-1]+" ") }{startDate.day && (startDate.day+", ") }{startDate.year}</h1>
+                            <h2>Source • {source}</h2>
+                        </div>
+                        <div className="rankings">
+                            <div style={{color: "rgb(232,93,117)", }}>
+                                <FaRegHeart size={22}/>
+                            </div>
+                            {rank && <p># {rank}</p>}
+                        </div>
                     </div>
                     <div className="second-info">
                         <div className="hashtags">

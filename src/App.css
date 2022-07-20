@@ -44,7 +44,7 @@ nav > img{
 }
 
 .season.dark.selected > div{
-  color:#B0B3D5
+  color:hsl(188, 100%, 84%)
 }
 
 .seasons{
@@ -80,24 +80,35 @@ nav > img{
   right: 1.5%;
   display: flex;
   justify-content: flex-start;
+  color:#B0B3D5
+}
+
+.top-icons.dark{
+  color:#EDF1F5
 }
 
 .top-icon{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   margin: 5px;
   padding-top: 24px;
   cursor: pointer;
+  margin: 10px;
 }
 
-.top-img{
-  height: 22px;
-  margin-bottom: 5px;
+.top-icon.selected{
+  color:#EDF1F5
 }
+
+.top-icons.dark > .top-icon.selected{
+  color:hsl(188, 100%, 84%)
+}
+
 
 .top-icon > p{
   margin: 8px;
+  margin-top: 8px;
   padding: 0px;
   font-size: 0.9rem;
 }
@@ -208,6 +219,11 @@ nav > img{
   width: 350px;
   margin-left: 0px;
   transition: margin 0.5s;
+  display: flex;
+}
+
+.text{
+  margin-right: auto;
 }
 
 .top-info:hover{
@@ -224,7 +240,7 @@ nav > img{
   width: 350px;
 }
 
-.first-info > h1{
+.text > h1{
   font-size: 1.8rem;
   font-weight: 600;
   padding-top: 3px;
@@ -232,7 +248,7 @@ nav > img{
 }
 
 
-.first-info > p{
+.text > p{
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0px;
@@ -242,7 +258,7 @@ nav > img{
 
 
 
-.first-info > h2{
+.text > h2{
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0px;
@@ -265,6 +281,19 @@ nav > img{
   max-height: 80px;
 }
 
+.rankings{
+  display: flex;
+  margin-right: 30px;
+  margin: 10px;
+  justify-content: flex-start;
+  align-items:flex-start
+}
+
+.rankings > p{
+  padding: 1px;
+  margin: 0px;
+  margin-left: 5px;
+}
 
 .category-box{
   height: 44px;

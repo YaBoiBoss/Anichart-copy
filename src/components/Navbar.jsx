@@ -3,26 +3,25 @@ import React , {useState}from "react"
 import Seasson from "./Season"
 import TopIcon from "./TopIcon"
 
+import {BsCalendar2Event, BsArchive, BsChevronDoubleRight, } from "react-icons/bs";
+import {FiSettings} from "react-icons/fi";
+
 const seasonsArr = ["Winter","Spring","Summer","Fall"]
 const topIconArr = [
     {
-        img: "https://i.imgur.com/BmS97UE.png",
-        selectedImg: "https://i.imgur.com/bA27Dve.png",
+        img: <BsCalendar2Event />,
         value: "Airing"
     },
     {
-        img: "https://i.imgur.com/yDQLV5p.png",
-        selectedImg: "https://i.imgur.com/jNAbltI.png",
+        img: <BsArchive />,
         value: "Archieve"
     },
     {
-        img: "https://i.imgur.com/jzGJy9B.png",
-        selectedImg: "https://i.imgur.com/xd64GWW.png",
+        img: <BsChevronDoubleRight />,
         value: "TBA"
     },
     {
-        img: "https://i.imgur.com/9ciXNfL.png",
-        selectedImg: "https://i.imgur.com/DWuijfu.png",
+        img: <FiSettings />,
         value: "Settings"
     },
 ]
@@ -75,7 +74,7 @@ export default function Navbar(props){
             <div className="seasons">
                 {seasonElements}
             </div>
-            <div className="top-icons">
+            <div className={"top-icons "+addedClass}>
                 {topIconElements}
             </div>
             <div className="dark-mode-wrap">
