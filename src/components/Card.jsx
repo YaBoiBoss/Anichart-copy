@@ -4,7 +4,7 @@ const Months = ['January','February','March','April','May','June','July','August
 
 export default function Card(props){
     const {title,coverImage,startDate,episodes,source,description,genres,studios} = props.info;
-
+    const {hashtag,trailer} = props.info;
 
     const addedClass = props.darkMode ? "dark" : ""
 
@@ -36,7 +36,15 @@ export default function Card(props){
                         <h1>{startDate.month && (Months[startDate.month-1]+" ") }{startDate.day && (startDate.day+", ") }{startDate.year}</h1>
                         <h2>Source • {source}</h2>
                     </div>
-                    <div className="second-info">test</div>
+                    <div className="second-info">
+                        <div className="hashtags">
+                            <p>{hashtag}</p>
+                            <img src="https://i.imgur.com/X9Ena6i.png" />
+                        </div>
+                        <div className="trailer-frame">
+                            {trailer && <img src={trailer.thumbnail} />}
+                        </div>
+                    </div>
                 </div>
                 <h3>{desc && desc}</h3>
                 <div className={"category-box "+addedClass}>

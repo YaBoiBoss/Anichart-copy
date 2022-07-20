@@ -203,6 +203,10 @@ nav > img{
   left: 10px;
   z-index: 5;
   margin-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 350px;
 }
 
 .first-info > h1{
@@ -319,4 +323,27 @@ nav > img{
 }
 
 
+.hashtags{
+  margin-right: auto;
+  justify-content: flex-start;
+  position: relative;
+  display: inline;
+}
 
+.hashtags > p{
+  width: 200px;
+}
+
+.hashtags > img{
+  width: 110px;
+}
+
+.trailer-frame{
+  height: 50px;
+  margin-right: 20px;
+}
+
+.trailer-frame > img{
+  height: 100%;
+  border-radius: 10px;
+}
