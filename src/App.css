@@ -180,49 +180,61 @@ nav > img{
   background: #3c3c3c;
 }
 
-.card--right > h1{
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding-top: 3px;
-  color: #5C728A;
-  margin: 0px;
+.top-info{
+  display: flex;
+  width: 300%;
+  height:100px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  transition: margin 0.5s;
+}
+
+.first-info{
+  width: 350px;
+  margin-left: 0px;
+  transition: margin 0.5s;
+}
+
+.top-info:hover{
+  margin-left: -350px;
+}
+
+.second-info{
+  left: 10px;
+  z-index: 5;
   margin-left: 20px;
 }
 
-.card--right.dark > h1{
-  color: #fafbfc;
+.first-info > h1{
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-top: 3px;
+  margin: 0px;
 }
 
-.card--right > p{
-  color:#5C728A;
+
+.first-info > p{
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0px;
   padding-top: 10px;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
-.card--right.dark > p{
-  color: #fafbfc;
-}
 
-.card--right > h2{
-  color:#5C728A;
+
+.first-info > h2{
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0px;
-  padding-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 8px;
 }
 
-.card--right.dark > h2{
+.card--right.dark{
   color: #fafbfc;
 }
 
 .card--right > h3{
   overflow: hidden;
-  color:#5C728A;
   font-size: 0.8rem;
   line-height: 1.6;
   margin: 0px;
@@ -234,9 +246,6 @@ nav > img{
   max-height: 80px;
 }
 
-.card--right.dark > h3{
-  color: #fafbfc;
-}
 
 .category-box{
   height: 44px;
@@ -275,23 +284,39 @@ nav > img{
 
 .dark-mode-frame{
   margin-left: 10px;
-  background: #EDF1F5;
+  background:#5C728A;
   width: 40px;
   height: 20px;
   border-radius: 10px;
   display: flex;
-  align-items: center
+  align-items: center;
+  position:relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.dark-mode-frame.dark{
+  background: #EDF1F5;
+  transition: 0.5s;
 }
 
 .dark-mode--toggle{
-  background:#5C728A;
+  background-color: #EDF1F5;
   height: 21px;
   width: 21px;
   border-radius: 50%;
   border:#312c66 1px solid;
-  cursor: pointer;
+  transition: all 0.5s;
+  position: absolute;
+  left:0px;
+  transition: 0.5s;
 }
 
 .dark-mode--toggle.dark{
-  margin-left: auto;
+  transition: all 0.5s;
+  left: 20px;
+  background:#5C728A;
 }
+
+
+

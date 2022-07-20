@@ -30,9 +30,14 @@ export default function Card(props){
                 </div>
             </div>
             <div className={"card--right "+addedClass}>
-                <p>{episodes ? episodes+" Episodes a" : "A"}iring in</p>
-                <h1>{startDate.month && (Months[startDate.month-1]+" ") }{startDate.day && (startDate.day+", ") }{startDate.year}</h1>
-                <h2>Source • {source}</h2>
+                <div className="top-info">
+                    <div className="first-info">
+                        <p>{episodes ? episodes+" Episodes a" : "A"}iring in</p>
+                        <h1>{startDate.month && (Months[startDate.month-1]+" ") }{startDate.day && (startDate.day+", ") }{startDate.year}</h1>
+                        <h2>Source • {source}</h2>
+                    </div>
+                    <div className="second-info">test</div>
+                </div>
                 <h3>{desc && desc}</h3>
                 <div className={"category-box "+addedClass}>
                     {genreElements}

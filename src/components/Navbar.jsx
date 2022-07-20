@@ -80,8 +80,8 @@ export default function Navbar(props){
             </div>
             <div className="dark-mode-wrap">
                 <p>Dark Mode</p>
-                <div className="dark-mode-frame">
-                    <div className={"dark-mode--toggle "+addedClass} onClick={()=>setDarkMode(prevState => !prevState)} >
+                <div className={"dark-mode-frame "+addedClass} onClick={()=>setDarkMode(prevState => !prevState)}>
+                    <div className={"dark-mode--toggle "+addedClass} >
                     </div>
                 </div>
             </div>
