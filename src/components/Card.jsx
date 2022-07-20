@@ -21,7 +21,7 @@ export default function Card(props){
 
 
     return(
-        <div className="card" >
+        <div className={"card "+addedClass} >
             <div className="card--left">
                 <img className="card--img" src={coverImage.extraLarge} />
                 <div className="card--name-box">
