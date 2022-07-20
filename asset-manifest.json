@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/anichart-copy/static/css/main.f4c46a3d.css",
-    "main.js": "/anichart-copy/static/js/main.baf874bf.js",
+    "main.css": "/anichart-copy/static/css/main.3e81720d.css",
+    "main.js": "/anichart-copy/static/js/main.869f6646.js",
     "static/js/787.b734fbb9.chunk.js": "/anichart-copy/static/js/787.b734fbb9.chunk.js",
     "index.html": "/anichart-copy/index.html",
-    "main.f4c46a3d.css.map": "/anichart-copy/static/css/main.f4c46a3d.css.map",
-    "main.baf874bf.js.map": "/anichart-copy/static/js/main.baf874bf.js.map",
+    "main.3e81720d.css.map": "/anichart-copy/static/css/main.3e81720d.css.map",
+    "main.869f6646.js.map": "/anichart-copy/static/js/main.869f6646.js.map",
     "787.b734fbb9.chunk.js.map": "/anichart-copy/static/js/787.b734fbb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4c46a3d.css",
-    "static/js/main.baf874bf.js"
+    "static/css/main.3e81720d.css",
+    "static/js/main.869f6646.js"
   ]
 }
