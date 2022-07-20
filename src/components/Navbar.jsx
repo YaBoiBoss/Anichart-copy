@@ -34,34 +34,32 @@ export default function Navbar(props){
     const addedClass = darkMode ? "dark" : ""
 
 
-    const [seasons,setSeasons] = useState(seasonsArr.map((season,index)=>{
-        return{
-            value: season,
-            selected: false,
-            id: index
-        }
-    }))
-
     const [topIcons,setTopIcons] = useState(topIconArr.map(icon=>(
         {...icon,selected:false}
     )))
 
     function handleClick(value){
-        setSeasons(prevState => (
-            prevState.map(season => {
-                return season.value == value ? {...season,selected:true} : {...season,selected:false}
-            })
-        ))
+        
         setTopIcons(prevState =>(
             prevState.map(topIcon => {
                 return topIcon.value == value ? {...topIcon,selected:true} : {...topIcon,selected:false}
             })
         ))
+        if(value === "Summer" || value === "Fall" || value === "Spring" || value === "Winter") props.changeSeason(value)
+        
     }
 
 
-    const seasonElements = seasons.map(
-        season => <Seasson darkMode={props.darkMode} info={season} key={season.id} handleClick={handleClick} />
+    const seasonElements = seasonsArr.map(
+        (season,index) => <Seasson darkMode={props.darkMode} 
+        info={
+            {
+                value: season,
+                selected: props.currentSeason == season,
+                id: index
+            }
+        } 
+        key={season.id} handleClick={handleClick} />
     )
 
     const topIconElements = topIcons.map(

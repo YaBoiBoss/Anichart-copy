@@ -128,6 +128,7 @@ nav > img{
   display: flex;
   box-shadow: 0 4px 6px rgb(49 54 68 / 5%), 0 5px 20px rgb(49 54 68 / 8%);
   transition: box-shadow 0.5s;
+  color: #5C728A;
 }
 
 .card.dark:hover{

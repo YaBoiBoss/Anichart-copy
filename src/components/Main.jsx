@@ -4,9 +4,9 @@ import Card from "./Card"
 export default function Main(props){
 
 
-    const mediaElements = props.media.map(anime => {
+    const mediaElements = props.media ? props.media.map(anime => {
         return <Card info = {anime} darkMode={props.darkMode}/>
-    })
+    }) : ""
     
 
     return(
